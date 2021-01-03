@@ -45,14 +45,14 @@ class StockPicking(models.Model):
                         self.env['account.move.line'].with_context(check_move_validity=False).create({
                             'move_id': move_id.id,
                             'name': ln.product_id.name,
-                            'analytic_account_id': self.location_dest_id.analytic_account_id.id,
+                            'analytic_account_id': self.location_id.analytic_account_id.id,
                             'account_id': ln.product_id.categ_id.property_stock_valuation_account_id.id,
                             'credit': ln.product_id.standard_price * ln.product_uom_qty,
                             'debit': 0.0,
                         })
                         self.env['account.move.line'].with_context(check_move_validity=False).create({
                             'move_id': move_id.id,
-                            'analytic_account_id': self.location_id.analytic_account_id.id,
+                            'analytic_account_id': self.location_dest_id.analytic_account_id.id,
                             'name': ln.product_id.name,
                             'account_id': ln.product_id.categ_id.property_stock_valuation_account_id.id,
                             'debit': ln.product_id.standard_price * ln.product_uom_qty,
