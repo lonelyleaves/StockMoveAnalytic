@@ -3,7 +3,7 @@
     'name': "stock_move_analytic",
     'summary': """Stock Move Analytic """,
     'description': """ Add analytic account in ..........  """,
-    'author': "",
+    'author': "CubicIt Egypt",
     'category': 'Uncategorized',
     'version': '13.0.0.1',
     'depends': ['base','account', 'sale', 'product', 'stock'],
